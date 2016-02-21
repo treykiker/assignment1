@@ -13,7 +13,7 @@ import java.util.Random;
 public class Customer {
 	
 	private int serviceTime; 				// ServiceTime for this Customer
-   private Customer next;
+   	private Customer next;
 	
 	/// Constructor
 	public Customer() {										
@@ -22,14 +22,14 @@ public class Customer {
 	}
    
    // Getter for next Customer in list
-   public Customer getNext(){
+   	public Customer getNext(){
       return next;
-   }
+   	}
    
    // Setter for next reference
-   public void setNext(Customer c){
+   	public void setNext(Customer c){
       next = c;
-   }
+   	}
 	
 	/// Getter for ServiceTime
 	public int getServiceTime() {							
