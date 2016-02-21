@@ -18,17 +18,17 @@ public class Customer {
 	/// Constructor
 	public Customer() {										
 		serviceTime = new Random().nextInt(5) + 1;	// Randomly assign required service time 1-5
-      next = null;
+      	next = null;
 	}
    
    // Getter for next Customer in list
    	public Customer getNext(){
-      return next;
+      	return next;
    	}
    
    // Setter for next reference
    	public void setNext(Customer c){
-      next = c;
+      	next = c;
    	}
 	
 	/// Getter for ServiceTime
