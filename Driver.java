@@ -2,7 +2,8 @@
 	Program: Driver
 	Professor: David Kiker
 	Date: 2/29/2016
-	Summary: Simulates a 60 minute time frame in a grocery store line. Adds and removes customers to the line and updates every minute.
+	Summary: Simulates a 60 minute time frame in a grocery store line. There is a 25% chance a customer will be added
+	and a customer is removed after their service time reaches zero. The queue updates every minute.
 */
 	
 import java.util.Random; // Used to give a 25% chance of adding a new customer at each iteration.
@@ -23,10 +24,11 @@ public class Driver{
 			if(addCust == 1){ // If the value is 1, a new customer is created and added to the queue. A message and the queue size is displayed to the user.
 				Customer c = new Customer();
 				cqueue.addCustomer(c);
-				System.out.println("New customer added! Queue length is now " + cqueue.getSize());
+				System.out.println("New customer added! Queue length is now " + cqueue.getSize() + ".");
 			}
 
 			Customer first = cqueue.getFirst(); // The first customer in the queue is the customer currently being serviced.
+
 			if(cqueue.isEmpty()){ // If the queue is empty nothing happens and a message is displayed to the user.
 				System.out.println("The queue is empty, no customers serviced!");
 			}
@@ -36,7 +38,7 @@ public class Driver{
 			}
 			else{ // If the serviceTime is 0, the customer has been fully serviced and is removed from queue.
 				cqueue.removeCustomer();
-				System.out.println("Customer serviced and removed from the queue. Queue length is now " + cqueue.getSize()); // Message is displayed to user
+				System.out.println("Customer serviced and removed from the queue. Queue length is now " + cqueue.getSize() + "."); // Message is displayed to user
 																															// to show that the customer has been removed.
 				custServed++; // Number of customers serviced is incremented.
 			}
