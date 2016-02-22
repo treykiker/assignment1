@@ -20,7 +20,7 @@ public class CustomerQueue{
 		lineSize = 0;
 	}
 
-	// Checks to see if the line is empty, if so it returns null.
+	// Checks to see if the line is empty, if so it returns true.
 	public boolean isEmpty(){
 
 		return first == null;
