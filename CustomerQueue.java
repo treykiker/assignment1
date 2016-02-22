@@ -13,7 +13,7 @@ public class CustomerQueue{
 	private Customer first, last;
 	private int lineSize; // Size of the line of customers.
 
-	//Cunstructor
+	//Constructor
 	public CustomerQueue(){
 
 		first = last = null;
@@ -26,7 +26,7 @@ public class CustomerQueue{
 		return first == null;
 	}
 
-	// Adds customers to the queue
+	// Adds customers to the queue.
 	public void addCustomer(Customer c){
 
 		if(isEmpty()){ // If the queue is empty, the new customer becomes the first and last element of the queue.
@@ -40,7 +40,7 @@ public class CustomerQueue{
 		}
 	}
 
-	// Removes customers from the queue
+	// Removes customers from the queue.
 	public Customer removeCustomer(){
 
 		if(isEmpty()){ // If the queue is empty, null is returned since no customer can be removed.
@@ -53,16 +53,18 @@ public class CustomerQueue{
 
 		lineSize--; // Queue size is decremented.
 
-		if(first == null){ // If the first element becomes null after removing a customer from the queue, set the last element to null.
+		if(first == null){ // If the first element becomes null after removing a customer from the queue, queue is now empty.
 			last = null;
 		}
 
 		return c; // The next customer is returned.
 	}
-	// Getter for the size of the queue
+
+	// Getter for the size of the queue.
 	public int getSize(){
 		return lineSize;
 	}
+	
 	// Getter for the first element in the queue.
 	public Customer getFirst(){
 		return first;
